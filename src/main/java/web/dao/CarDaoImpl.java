@@ -18,12 +18,12 @@ public class CarDaoImpl implements CarDao {
     }
 
     @Override
-    public List<Car> getCarByCount(int count) {
-        return carList.subList(0, count);
-    }
-
-    @Override
-    public List<Car> getAllCar() {
+    public List<Car> getCarByCount(Integer count) {
+        if (count == null || count >= 5 || count<=0) {
+            carList = carList;
+        } else {
+            carList = carList.subList(0, count);
+        }
         return carList;
     }
 }
