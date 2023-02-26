@@ -8,7 +8,7 @@ import java.util.List;
 
 public class CarServiceImpl implements CarService {
 
-    CarDao carDao = new CarDaoImpl();
+    private CarDao carDao = new CarDaoImpl();
 
     @Override
     public List<Car> getCarByCount(int count) {
